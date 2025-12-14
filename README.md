@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+# React.js Complete Documentation Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live: https://showlittlemercy.github.io/REACTJS
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+A professional, responsive React.js documentation website covering the complete syllabus with interactive demos, theme toggle, and modern animations. Built with React 19, React Router, Tailwind CSS, and Framer Motion.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Comprehensive React syllabus (20 topics) from basics to advanced
+- Interactive demos: Counter, Todo, Theme Switcher, Form Validation, useReducer, Conditional Rendering
+- Dark/Light theme toggle with localStorage persistence
+- Smooth animations and hover effects via Framer Motion
+- Fully responsive layout (mobile, tablet, desktop)
+- Syntax-highlighted code examples
+- Creator info and social links in the footer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- React 19, React Router v7
+- Tailwind CSS v3, PostCSS, Autoprefixer
+- Framer Motion (animations)
+- React Syntax Highlighter, React Icons
+- CRA (react-scripts) for build tooling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+```
+src/
+	components/
+		Navbar.jsx
+		Footer.jsx
+	context/
+		ThemeContext.jsx
+	pages/
+		Home.jsx
+		Documentation.jsx
+		Demo.jsx
+	App.js
+	App.css
+	index.css
+	index.js
+tailwind.config.js
+postcss.config.js
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Quick Start (Development)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm install
+npm start
+```
+Open http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Build (Production)
 
-### `npm run eject`
+```bash
+npm run build
+```
+Outputs optimized assets in `build/`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Deploy (GitHub Pages)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This repo is configured for GitHub Pages using `gh-pages`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm run deploy
+```
+Published at: https://showlittlemercy.github.io/REACTJS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Routing Note
 
-## Learn More
+`package.json` sets `homepage` to ensure correct asset paths on GitHub Pages. Routes are served under `/REACTJS`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Detailed Curriculum (20 Topics)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. What is React? — concepts, virtual DOM, declarative UI
+2. JSX Syntax — expressions, attributes, children
+3. Components — function components, props, composition
+4. Props — passing data, default props, prop patterns
+5. State & Hooks — `useState`, re-rendering, patterns
+6. `useEffect` — side effects, dependencies, cleanup
+7. Event Handling — synthetic events, handlers
+8. Conditional Rendering — if/ternary/AND patterns
+9. Lists & Keys — map, stable keys, performance
+10. Forms — controlled/uncontrolled, validation
+11. Context API — global state, `useContext`
+12. `useReducer` — reducer pattern, actions
+13. Custom Hooks — reusable logic conventions
+14. Performance — `React.memo`, `useMemo`, `useCallback`
+15. Composition — children, render props, HOC
+16. React Router — routes, `Link`, `useParams`
+17. API Integration — fetch/async, loading/error states
+18. Error Boundaries — graceful fallback UIs
+19. Testing — RTL and Jest basics
+20. Production — build, preview, deploy
 
-### Code Splitting
+## Interactive Demos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Counter (useState)
+- Todo App (list + state)
+- Theme Switcher (Context API)
+- Form Validation (controlled inputs)
+- Reducer Demo (useReducer)
+- Conditional Rendering (role-based UI)
 
-### Analyzing the Bundle Size
+## Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Colors: edit `tailwind.config.js`
+- Theme: `src/context/ThemeContext.jsx`
+- Nav links: `src/components/Navbar.jsx`
+- Topics: `src/pages/Documentation.jsx`
 
-### Making a Progressive Web App
+## Commands
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# Start dev server
+npm start
 
-### Advanced Configuration
+# Build for production
+npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Deploy to GitHub Pages
+npm run deploy
 
-### Deployment
+# Run tests
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Creator
 
-### `npm run build` fails to minify
+Priyanshu
+- Email: showlittlemercy@gmail.com
+- GitHub: https://github.com/showlittlemercy
+- LinkedIn: https://www.linkedin.com/in/priyanshu-thakur-a47774360/
+- Instagram: https://www.instagram.com/showlittlemercy/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+MIT
+
+## Acknowledgements
+
+- React, React Router, Tailwind CSS, Framer Motion
+- CRA deployment guide: https://cra.link/deployment
