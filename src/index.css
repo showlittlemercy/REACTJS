@@ -1,8 +1,16 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +18,108 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.light-mode {
+  @apply bg-white text-gray-900;
+}
+
+.dark-mode {
+  @apply bg-slate-900 text-slate-100;
+}
+
+/* Animations */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glow-animation {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.gradient-animation {
+  animation: gradient 6s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Hover effects */
+.hover-lift {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.hover-scale {
+  @apply transition-transform duration-300 hover:scale-105;
+}
+
+.button-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50;
+}
+
+/* Code highlighting */
+.code-block {
+  @apply bg-slate-800 text-slate-100 p-4 rounded-lg overflow-x-auto my-4;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.dark-mode .code-block {
+  @apply bg-slate-800;
+}
+
+.light-mode .code-block {
+  @apply bg-gray-100 text-gray-900;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+}
+
+/* Smooth transitions */
+a, button {
+  @apply transition-all duration-300;
+}
+
+/* Cards */
+.card-hover {
+  @apply border-l-4 border-blue-500 hover:border-l-8 transition-all duration-300 hover:shadow-lg;
+}
+
+.card-shadow {
+  @apply shadow-md hover:shadow-xl transition-shadow duration-300;
 }
